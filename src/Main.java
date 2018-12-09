@@ -54,8 +54,9 @@ public class Main
         {
             while ((line = br.readLine()) != null)
             {
-                String[] country = line.split(cvsSplitBy);
-                gpsPoints.add(new Point(Double.parseDouble(country[0]), Double.parseDouble(country[1])));
+                String[] pointInformation = line.split(cvsSplitBy);
+                gpsPoints.add(new Point(Double.parseDouble(pointInformation[0]),
+                                        Double.parseDouble(pointInformation[1])));
             }
         }
         catch (IOException e)
